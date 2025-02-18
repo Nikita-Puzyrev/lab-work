@@ -31,7 +31,7 @@ public class CSVParser {
     // Для примера покажем, как можно пользоваться этим парсером
     public static void main(String[] args) {
         // Пример использования
-        CSVParser parser = new CSVParser("C:\\Users\\star_\\Downloads\\data-20170202T1621-structure-20170202T1614.csv", ",");  // Укажите свой путь к файлу и нужный разделитель
+        CSVParser parser = new CSVParser(" /path/file.csv", ",");  // Укажите свой путь к файлу и нужный разделитель
 
         try {
             List<String[]> rows = parser.parse();
