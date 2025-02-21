@@ -31,14 +31,13 @@ public class CSVParser {
     // Для примера покажем, как можно пользоваться этим парсером
     public static void main(String[] args) {
         // Пример использования
-        CSVParser parser = new CSVParser(" /path/file.csv", ",");  // Укажите свой путь к файлу и нужный разделитель
+        CSVParser parser = new CSVParser(" /path/file.csv", ","); 
 
         try {
             List<String[]> rows = parser.parse();
 
             // Вывод на экран
             for (String[] row : rows) {
-                // Допустим, выводим значения ячеек в одной строке, разделённые табуляцией
                 System.out.println(String.join("\t", row));
             }
         } catch (IOException e) {
