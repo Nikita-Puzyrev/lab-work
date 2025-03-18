@@ -22,9 +22,7 @@ public class CSVParser {
 
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
-            // Читаем файл построчно
             while ((line = br.readLine()) != null) {
-                // Разбиваем строку на столбцы по разделителю
                 String[] columns = line.split(delimiter);
                 result.add(columns);
             }
@@ -33,7 +31,6 @@ public class CSVParser {
         return result;
     }
 
-    // Для примера покажем, как можно пользоваться этим парсером
     public static void main(String[] args) {
         // Пример использования
         CSVParser parser = new CSVParser("data.csv", ",");
@@ -41,9 +38,7 @@ public class CSVParser {
         try {
             List<String[]> rows = parser.parse();
 
-            // Вывод на экран
             for (String[] row : rows) {
-                // Допустим, выводим значения ячеек в одной строке, разделённые табуляцией
                 System.out.println(String.join("\t", row));
             }
         } catch (IOException e) {
